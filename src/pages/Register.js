@@ -66,7 +66,10 @@ function Register() {
         return;
       }
 
-      const response = await axios.post("/api/users/register", user);
+      const response = await axios.post(
+        "https://green-chiton-hem.cyclic.app/api/users/register",
+        user
+      );
       dispatch(HideLoading());
 
       if (response.data.success) {

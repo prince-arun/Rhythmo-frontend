@@ -35,11 +35,15 @@ function AddEditSong() {
       Object.keys(song).forEach((key) => {
         formData.append(key, song[key]);
       });
-      const response = await axios.post("/api/admin/add-song", formData, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
+      const response = await axios.post(
+        "https://green-chiton-hem.cyclic.app/api/admin/add-song",
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
       dispatch(HideLoading());
       if (response.data.success) {
         toast.success("Song added successfully");
@@ -62,11 +66,15 @@ function AddEditSong() {
         formData.append(key, song[key]);
       });
       formData.append("_id", songId);
-      const response = await axios.post("/api/admin/edit-song", formData, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
+      const response = await axios.post(
+        "https://green-chiton-hem.cyclic.app/api/admin/edit-song",
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
       dispatch(HideLoading());
       if (response.data.success) {
         toast.success("Song updated successfully");

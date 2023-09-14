@@ -34,7 +34,7 @@ function CreateEditPlaylist() {
       try {
         dispatch(ShowLoading());
         const response = await axios.post(
-          "/api/songs/add-playlist",
+          "https://green-chiton-hem.cyclic.app/api/songs/add-playlist",
           {
             name,
             songs: selectedSongs,
@@ -69,7 +69,7 @@ function CreateEditPlaylist() {
       try {
         dispatch(ShowLoading());
         const response = await axios.post(
-          "/api/songs/update-playlist",
+          "https://green-chiton-hem.cyclic.app/api/songs/update-playlist",
           {
             name,
             songs: selectedSongs,

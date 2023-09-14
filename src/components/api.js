@@ -3,7 +3,7 @@ import axios from "axios";
 export const fetchAllSongs = async () => {
   try {
     const response = await axios.post(
-      "/api/songs/get-all-songs",
+      "https://green-chiton-hem.cyclic.app/api/songs/get-all-songs",
       {},
       {
         headers: {

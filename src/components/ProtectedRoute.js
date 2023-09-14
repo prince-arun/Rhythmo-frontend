@@ -16,7 +16,7 @@ const ProtectedRoute = ({ children }) => {
     try {
       dispatch(ShowLoading());
       const response = await axios.post(
-        "/api/users/get-user-data",
+        "https://green-chiton-hem.cyclic.app/api/users/get-user-data",
         {},
         {
           headers: {
